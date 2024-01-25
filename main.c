@@ -4,9 +4,7 @@
 void main(){
     int num1 = 0;
     int num2 = 0;
-    printf("Enter the first number: ");
     scanf("%d", &num1);
-    printf("Enter the second number: ");
     scanf("%d", &num2);
 
     int distance = 0;
@@ -23,6 +21,17 @@ void main(){
         low = num2;
         high = num1;
         }
+    if(num1 == num2){
+        printf("The Armstrong numbers are:");
+        if((isArmstrong(num1))){printf("%d", num1);}
+        printf("\nThe Palindromes are:");
+        if(isPalindrome(num1)){printf("%d", num1);}
+        printf("\nThe Prime numbers are:");
+        if(isPrime(num1)){printf("%d", num1);}
+        printf("\nThe Strong numbers are:");
+        if(isStrong(num1)){printf("%d", num1);}
+        
+    }
     printf("The Armstrong numbers are:");
     for(int i = 0; i<distance; i++){
         if(isArmstrong(i+low)){
